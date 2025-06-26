@@ -17,6 +17,11 @@
 
 int main(int argc, char* argv[]) {
     
+    if (enet_initialize() != 0) {
+            printf("ENet initialization failed.\n");
+            return EXIT_FAILURE;
+        }
+    
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_GAMECONTROLLER) != 0) {
             std::cerr << "SDL_Init Error: " << SDL_GetError() << std::endl;
             return 1;
@@ -46,6 +51,7 @@ int main(int argc, char* argv[]) {
 //    luaL_dostring(state, str);
     //luaL_dofile(state, "code.lua");
     //std::cout << "win";
+    atexit(enet_deinitialize);
 
     return 0;
 }

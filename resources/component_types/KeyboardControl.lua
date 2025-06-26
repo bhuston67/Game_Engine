@@ -4,6 +4,20 @@ KeyboardControl = {
 
 	OnStart = function(self)
 		self.transform = self.actor:GetComponent("Transform")
+		self.renderer = self.actor:GetComponent("SpriteRenderer")
+		self.cjson = require("cjson")
+		Network.Subscribe("currentClientRequest",self,self.OnClientRequest)
+		Network.sendPacket(self.cjson.encode({
+			eventType = "created",
+			sprite = self.renderer.sprite,
+			x = self.transform.x,
+			y = self.transform.y,
+			r = self.renderer.r,
+			g = self.renderer.g,
+			b = self.renderer.b,
+			a = self.renderer.a,
+			sort = self.renderer.sorting_order
+		 }))
 	end,
 
 	OnUpdate = function(self)
@@ -11,20 +25,21 @@ KeyboardControl = {
 		-- Collect Inputs
 		local vel_x = 0
 		local vel_y = 0
+		local moved = false
 
-		if Input.GetLeftJoystickDirection("right", self.id) then
+		if Input.GetKey("right") then
 			vel_x = vel_x + self.speed
 		end
 
-		if Input.GetLeftJoystickDirection("left", self.id) then
+		if Input.GetKey("left") then
 			vel_x = vel_x - self.speed
 		end
 
-		if Input.GetLeftJoystickDirection("up", self.id) then
+		if Input.GetKey("up") then
 			vel_y = vel_y - self.speed
 		end
 
-		if Input.GetLeftJoystickDirection("down", self.id) then
+		if Input.GetKey("down") then
 			vel_y = vel_y + self.speed
 		end
 
@@ -48,6 +63,35 @@ KeyboardControl = {
 		if self.transform.y < 0 then
 			self.transform.y = 0
 		end
+
+		if ((vel_x ~= 0) or (vel_y ~= 0)) then
+			Network.sendPacket(self.cjson.encode({
+				eventType = "move",
+				sprite = self.renderer.sprite,
+				x = self.transform.x,
+				y = self.transform.y,
+				r = self.renderer.r,
+				g = self.renderer.g,
+				b = self.renderer.b,
+				a = self.renderer.a,
+				sort = self.renderer.sorting_order
+		 	}))
+		end
+
+	end,
+
+	OnClientRequest = function(self,event)
+		Network.sendPacket(self.cjson.encode({
+			eventType = "currentClientResponse",
+			sprite = self.renderer.sprite,
+			x = self.transform.x,
+			y = self.transform.y,
+			r = self.renderer.r,
+			g = self.renderer.g,
+			b = self.renderer.b,
+			a = self.renderer.a,
+			sort = self.renderer.sorting_order
+		 }))
 	end
 }
 

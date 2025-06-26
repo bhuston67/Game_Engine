@@ -20,11 +20,16 @@
 #include "CollisionListener.hpp"
 #include "Physics.hpp"
 #include "Event.hpp"
+#include "Client.hpp"
 
 
 #include "lua/lua.hpp"
 #include "LuaBridge/LuaBridge.h"
 #include "box2d/box2d.h"
+
+extern "C" {
+    int luaopen_cjson(lua_State* L);
+}
 
 
 struct Actor;
@@ -63,6 +68,8 @@ public:
     static void OpenURL(std::string url);
     
     static void createWorld();
+    
+    static void preloadCjson();
     
 };
 

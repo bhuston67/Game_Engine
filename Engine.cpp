@@ -23,7 +23,7 @@ Engine::Engine() : util(EngineUtil()), scene(nullptr), document(rapidjson::Docum
         hasCustomResolution = true;
     }
     ComponentDB::Init();
-    
+    setupLua();
       Input::Init();
       Renderer::Init(hasCustomResolution);
       Renderer::createwindow(gameTitle.c_str());
@@ -55,6 +55,10 @@ void Engine::game_loop() {
         //scene->doLateActorAdds();
         scene->doNewOnStarts();
         
+        if (Client::client != nullptr) {
+            Client::processEvents();
+        }
+        
         scene->onUpdates();
         
         scene->onLateUpdates();
@@ -62,6 +66,7 @@ void Engine::game_loop() {
         scene->doOnDestroys();
         
         Event::lateHandleEvents();
+        Client::lateHandleEvents();
         
         if (ComponentDB::world != nullptr) {
             ComponentDB::world->Step(1.0f/60.0f, 8, 3);
@@ -95,6 +100,21 @@ void Engine::jsonValues() {
     else {
         std::cout << "error: initial_scene unspecified";
         exit(0);
+    }
+    it = document.FindMember("server");
+    if (it != document.MemberEnd()) {
+        auto server = it->value.GetObject();
+        std::string host = "0";
+        int port = -1;
+        auto it2 = server.FindMember("host");
+        if (it2 != server.MemberEnd()) {
+            host = it2->value.GetString();
+        }
+        it2 = server.FindMember("port");
+        if (it2 != server.MemberEnd()) {
+            port = it2->value.GetInt();
+        }
+        Client::setAddress(host, port);
     }
 }
 
@@ -153,4 +173,14 @@ Engine::~Engine() {
 //    }
 }
 
-
+extern "C" {
+    int luaopen_cjson(lua_State* L);
+}
+void Engine::setupLua() {
+    
+    lua_getglobal(ComponentDB::luaState, "package");
+    lua_getfield(ComponentDB::luaState, -1, "preload");
+    lua_pushcfunction(ComponentDB::luaState, luaopen_cjson);
+    lua_setfield(ComponentDB::luaState, -2, "cjson");
+    lua_pop(ComponentDB::luaState, 2); // pop 'preload' and 'package'
+}

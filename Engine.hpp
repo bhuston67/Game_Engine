@@ -26,6 +26,7 @@
 #include "Input.hpp"
 #include "ComponentDB.hpp"
 #include "Event.hpp"
+#include "Client.hpp"
 
 
 #include "lua/lua.hpp"
@@ -62,6 +63,8 @@ public:
     static bool canDestroy(Actor* actor);
     
     static void clearSaves();
+    
+    void setupLua();
     
     
     

@@ -23,6 +23,7 @@
 #include "ComponentDB.hpp"
 #include "RigidBody.hpp"
 #include "ParticleSystem.hpp"
+#include "Client.hpp"
 
 
 #include "glm/glm.hpp"
@@ -89,6 +90,8 @@ public:
     void loadSceneDestroys();
     
     static void createParticleSystem(const rapidjson::Value& doc, std::string key, Actor* actor);
+    
+    //static void createClient(const rapidjson::Value& doc, std::string key, Actor* actor);
     
     ~ Scene();
     

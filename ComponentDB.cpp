@@ -11,6 +11,8 @@
 void ComponentDB::Init() {
     luaState = luaL_newstate();
     luaL_openlibs(luaState);
+    preloadCjson();
+    
     world = nullptr;
     
     luabridge::getGlobalNamespace(luaState)
@@ -191,6 +193,12 @@ void ComponentDB::Init() {
     .addProperty("start_color_b", &ParticleSystem::b)
     .addProperty("start_color_a", &ParticleSystem::a)
     .endClass();
+    luabridge::getGlobalNamespace(luaState)
+        .beginNamespace("Network")
+        .addFunction("sendPacket", Client::sendPackage)
+        .addFunction("Subscribe", Client::Subscribe)
+        .addFunction("Unsubscribe", Client::Unsubscribe)
+        .endNamespace();
 
 }
 
@@ -282,3 +290,20 @@ void ComponentDB::createWorld() {
     world->SetContactListener(listen);
 }
 
+
+void ComponentDB::preloadCjson() {
+    lua_getglobal(luaState, "package");
+        lua_getfield(luaState, -1, "preload");
+        lua_pushcfunction(luaState, luaopen_cjson);
+        lua_setfield(luaState, -2, "cjson");
+        lua_pop(luaState, 2); // pop preload and package
+    
+    lua_getglobal(luaState, "require");
+    lua_pushstring(luaState, "cjson");
+    if (lua_pcall(luaState, 1, 1, 0) != LUA_OK) {
+        std::cerr << "Failed to require cjson: " << lua_tostring(luaState, -1) << std::endl;
+        lua_pop(luaState, 1);
+    } else {
+        lua_setglobal(luaState, "cjson");  // store returned module in _G.cjson
+    }
+}

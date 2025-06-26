@@ -125,10 +125,35 @@
 		EA1292402D90644E00244B28 /* CollisionListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA12923F2D90644E00244B28 /* CollisionListener.cpp */; };
 		EA1292432D919DA900244B28 /* Physics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1292422D919DA900244B28 /* Physics.cpp */; };
 		EA1292462D91FD6F00244B28 /* Event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1292452D91FD6F00244B28 /* Event.cpp */; };
+		EA6BCB942E051CA600A97E4C /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA6BCB932E051CA600A97E4C /* Client.cpp */; };
+		EA6BCBA62E0762A000A97E4C /* lua_cjson.c in Sources */ = {isa = PBXBuildFile; fileRef = EA6BCBA52E0762A000A97E4C /* lua_cjson.c */; };
+		EA6BCBA92E0764D200A97E4C /* strbuf.c in Sources */ = {isa = PBXBuildFile; fileRef = EA6BCBA72E0764D200A97E4C /* strbuf.c */; };
+		EA6BCBAA2E0764D200A97E4C /* strbuf.h in Sources */ = {isa = PBXBuildFile; fileRef = EA6BCBA82E0764D200A97E4C /* strbuf.h */; };
+		EA6BCBB02E0764DD00A97E4C /* fpconv.c in Sources */ = {isa = PBXBuildFile; fileRef = EA6BCBAB2E0764DD00A97E4C /* fpconv.c */; };
+		EA6BCBB12E0764DD00A97E4C /* fpconv.h in Sources */ = {isa = PBXBuildFile; fileRef = EA6BCBAC2E0764DD00A97E4C /* fpconv.h */; };
+		EA6BCBB42E0764DD00A97E4C /* g_fmt.c in Sources */ = {isa = PBXBuildFile; fileRef = EA6BCBAF2E0764DD00A97E4C /* g_fmt.c */; };
 		EAA1381D2D9DA21F00A46299 /* ParticleSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAA1381C2D9DA21F00A46299 /* ParticleSystem.cpp */; };
 		EABEC76A2D3F0DD900E200C5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EABA4DA12D3EE45E004F2569 /* main.cpp */; };
 		EABEC76D2D3F102200E200C5 /* Engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EABEC76C2D3F102200E200C5 /* Engine.cpp */; };
 		EABEC7742D492B5300E200C5 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EABEC7732D492B5300E200C5 /* Scene.cpp */; };
+		EAD567422E027F2A00EAEA99 /* packet.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD567302E027F2900EAEA99 /* packet.c */; };
+		EAD567432E027F2A00EAEA99 /* enet.h in Sources */ = {isa = PBXBuildFile; fileRef = EAD567312E027F2900EAEA99 /* enet.h */; };
+		EAD567442E027F2A00EAEA99 /* types.h in Sources */ = {isa = PBXBuildFile; fileRef = EAD567322E027F2900EAEA99 /* types.h */; };
+		EAD567452E027F2A00EAEA99 /* host.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD567332E027F2900EAEA99 /* host.c */; };
+		EAD567462E027F2A00EAEA99 /* callbacks.h in Sources */ = {isa = PBXBuildFile; fileRef = EAD567342E027F2900EAEA99 /* callbacks.h */; };
+		EAD567472E027F2A00EAEA99 /* unix.h in Sources */ = {isa = PBXBuildFile; fileRef = EAD567352E027F2900EAEA99 /* unix.h */; };
+		EAD567482E027F2A00EAEA99 /* peer.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD567362E027F2900EAEA99 /* peer.c */; };
+		EAD567492E027F2A00EAEA99 /* list.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD567372E027F2900EAEA99 /* list.c */; };
+		EAD5674A2E027F2A00EAEA99 /* protocol.h in Sources */ = {isa = PBXBuildFile; fileRef = EAD567382E027F2900EAEA99 /* protocol.h */; };
+		EAD5674B2E027F2A00EAEA99 /* compress.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD567392E027F2A00EAEA99 /* compress.c */; };
+		EAD5674C2E027F2A00EAEA99 /* win32.h in Sources */ = {isa = PBXBuildFile; fileRef = EAD5673A2E027F2A00EAEA99 /* win32.h */; };
+		EAD5674D2E027F2A00EAEA99 /* list.h in Sources */ = {isa = PBXBuildFile; fileRef = EAD5673B2E027F2A00EAEA99 /* list.h */; };
+		EAD5674E2E027F2A00EAEA99 /* win32.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD5673C2E027F2A00EAEA99 /* win32.c */; };
+		EAD5674F2E027F2A00EAEA99 /* time.h in Sources */ = {isa = PBXBuildFile; fileRef = EAD5673D2E027F2A00EAEA99 /* time.h */; };
+		EAD567502E027F2A00EAEA99 /* unix.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD5673E2E027F2A00EAEA99 /* unix.c */; };
+		EAD567512E027F2A00EAEA99 /* utility.h in Sources */ = {isa = PBXBuildFile; fileRef = EAD5673F2E027F2A00EAEA99 /* utility.h */; };
+		EAD567522E027F2A00EAEA99 /* callbacks.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD567402E027F2A00EAEA99 /* callbacks.c */; };
+		EAD567532E027F2A00EAEA99 /* protocol.c in Sources */ = {isa = PBXBuildFile; fileRef = EAD567412E027F2A00EAEA99 /* protocol.c */; };
 		EAD9AAF02D52E8A300CECD26 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD9AAEF2D52E8A300CECD26 /* SDL2.framework */; };
 		EAD9AAF12D52E8A300CECD26 /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EAD9AAEF2D52E8A300CECD26 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EAD9AAF72D52E8B700CECD26 /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD9AAF62D52E8B700CECD26 /* SDL2_mixer.framework */; };
@@ -298,6 +323,14 @@
 		EA1292442D91FD6F00244B28 /* Event.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Event.hpp; sourceTree = "<group>"; };
 		EA1292452D91FD6F00244B28 /* Event.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Event.cpp; sourceTree = "<group>"; };
 		EA65E97F2D3EB67B00FC1626 /* game_engine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = game_engine; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA6BCB922E051CA600A97E4C /* Client.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Client.hpp; sourceTree = "<group>"; };
+		EA6BCB932E051CA600A97E4C /* Client.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Client.cpp; sourceTree = "<group>"; };
+		EA6BCBA52E0762A000A97E4C /* lua_cjson.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = lua_cjson.c; path = ../lua/lua_cjson.c; sourceTree = "<group>"; };
+		EA6BCBA72E0764D200A97E4C /* strbuf.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = strbuf.c; path = ../lua/strbuf.c; sourceTree = "<group>"; };
+		EA6BCBA82E0764D200A97E4C /* strbuf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = strbuf.h; path = ../lua/strbuf.h; sourceTree = "<group>"; };
+		EA6BCBAB2E0764DD00A97E4C /* fpconv.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = fpconv.c; path = ../lua/fpconv.c; sourceTree = "<group>"; };
+		EA6BCBAC2E0764DD00A97E4C /* fpconv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fpconv.h; path = ../lua/fpconv.h; sourceTree = "<group>"; };
+		EA6BCBAF2E0764DD00A97E4C /* g_fmt.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = g_fmt.c; path = ../lua/g_fmt.c; sourceTree = "<group>"; };
 		EAA1381B2D9DA21F00A46299 /* ParticleSystem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ParticleSystem.hpp; sourceTree = "<group>"; };
 		EAA1381C2D9DA21F00A46299 /* ParticleSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleSystem.cpp; sourceTree = "<group>"; };
 		EABA4DA12D3EE45E004F2569 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -307,6 +340,24 @@
 		EABEC7722D492B5300E200C5 /* Scene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Scene.hpp; sourceTree = "<group>"; };
 		EABEC7732D492B5300E200C5 /* Scene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
 		EABEC7752D492BED00E200C5 /* Actor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Actor.hpp; sourceTree = "<group>"; };
+		EAD567302E027F2900EAEA99 /* packet.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = packet.c; path = ../enet/packet.c; sourceTree = "<group>"; };
+		EAD567312E027F2900EAEA99 /* enet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = enet.h; path = ../enet/enet.h; sourceTree = "<group>"; };
+		EAD567322E027F2900EAEA99 /* types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = types.h; path = ../enet/types.h; sourceTree = "<group>"; };
+		EAD567332E027F2900EAEA99 /* host.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = host.c; path = ../enet/host.c; sourceTree = "<group>"; };
+		EAD567342E027F2900EAEA99 /* callbacks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = callbacks.h; path = ../enet/callbacks.h; sourceTree = "<group>"; };
+		EAD567352E027F2900EAEA99 /* unix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = unix.h; path = ../enet/unix.h; sourceTree = "<group>"; };
+		EAD567362E027F2900EAEA99 /* peer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = peer.c; path = ../enet/peer.c; sourceTree = "<group>"; };
+		EAD567372E027F2900EAEA99 /* list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = list.c; path = ../enet/list.c; sourceTree = "<group>"; };
+		EAD567382E027F2900EAEA99 /* protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = protocol.h; path = ../enet/protocol.h; sourceTree = "<group>"; };
+		EAD567392E027F2A00EAEA99 /* compress.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = compress.c; path = ../enet/compress.c; sourceTree = "<group>"; };
+		EAD5673A2E027F2A00EAEA99 /* win32.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = win32.h; path = ../enet/win32.h; sourceTree = "<group>"; };
+		EAD5673B2E027F2A00EAEA99 /* list.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = list.h; path = ../enet/list.h; sourceTree = "<group>"; };
+		EAD5673C2E027F2A00EAEA99 /* win32.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = win32.c; path = ../enet/win32.c; sourceTree = "<group>"; };
+		EAD5673D2E027F2A00EAEA99 /* time.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = time.h; path = ../enet/time.h; sourceTree = "<group>"; };
+		EAD5673E2E027F2A00EAEA99 /* unix.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = unix.c; path = ../enet/unix.c; sourceTree = "<group>"; };
+		EAD5673F2E027F2A00EAEA99 /* utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = utility.h; path = ../enet/utility.h; sourceTree = "<group>"; };
+		EAD567402E027F2A00EAEA99 /* callbacks.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = callbacks.c; path = ../enet/callbacks.c; sourceTree = "<group>"; };
+		EAD567412E027F2A00EAEA99 /* protocol.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = protocol.c; path = ../enet/protocol.c; sourceTree = "<group>"; };
 		EAD9AAEF2D52E8A300CECD26 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = SDL2/lib/SDL2.framework; sourceTree = "<group>"; };
 		EAD9AAF32D52E8AE00CECD26 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = SDL2_image/lib/SDL2_image.framework; sourceTree = "<group>"; };
 		EAD9AAF62D52E8B700CECD26 /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = SDL2_mixer/lib/SDL2_mixer.framework; sourceTree = "<group>"; };
@@ -407,6 +458,12 @@
 				EA10AB5D2D6FAE8C00E9688D /* lvm.h */,
 				EA10AB6E2D6FAE8D00E9688D /* lvm.c */,
 				EA10AB572D6FAE8C00E9688D /* lzio.h */,
+				EA6BCBA52E0762A000A97E4C /* lua_cjson.c */,
+				EA6BCBA72E0764D200A97E4C /* strbuf.c */,
+				EA6BCBAF2E0764DD00A97E4C /* g_fmt.c */,
+				EA6BCBA82E0764D200A97E4C /* strbuf.h */,
+				EA6BCBAB2E0764DD00A97E4C /* fpconv.c */,
+				EA6BCBAC2E0764DD00A97E4C /* fpconv.h */,
 			);
 			path = luaFiles;
 			sourceTree = "<group>";
@@ -508,6 +565,9 @@
 		EA65E9762D3EB67B00FC1626 = {
 			isa = PBXGroup;
 			children = (
+				EA6BCB922E051CA600A97E4C /* Client.hpp */,
+				EA6BCB932E051CA600A97E4C /* Client.cpp */,
+				EAD567542E02874E00EAEA99 /* enetSRC */,
 				EAA1381B2D9DA21F00A46299 /* ParticleSystem.hpp */,
 				EAA1381C2D9DA21F00A46299 /* ParticleSystem.cpp */,
 				EA1292442D91FD6F00244B28 /* Event.hpp */,
@@ -554,6 +614,31 @@
 				EA65E97F2D3EB67B00FC1626 /* game_engine */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EAD567542E02874E00EAEA99 /* enetSRC */ = {
+			isa = PBXGroup;
+			children = (
+				EAD567382E027F2900EAEA99 /* protocol.h */,
+				EAD5673D2E027F2A00EAEA99 /* time.h */,
+				EAD567322E027F2900EAEA99 /* types.h */,
+				EAD567352E027F2900EAEA99 /* unix.h */,
+				EAD5673E2E027F2A00EAEA99 /* unix.c */,
+				EAD5673F2E027F2A00EAEA99 /* utility.h */,
+				EAD5673A2E027F2A00EAEA99 /* win32.h */,
+				EAD5673C2E027F2A00EAEA99 /* win32.c */,
+				EAD567412E027F2A00EAEA99 /* protocol.c */,
+				EAD567362E027F2900EAEA99 /* peer.c */,
+				EAD567302E027F2900EAEA99 /* packet.c */,
+				EAD567372E027F2900EAEA99 /* list.c */,
+				EAD5673B2E027F2A00EAEA99 /* list.h */,
+				EAD567332E027F2900EAEA99 /* host.c */,
+				EAD567312E027F2900EAEA99 /* enet.h */,
+				EAD567392E027F2A00EAEA99 /* compress.c */,
+				EAD567402E027F2A00EAEA99 /* callbacks.c */,
+				EAD567342E027F2900EAEA99 /* callbacks.h */,
+			);
+			path = enetSRC;
 			sourceTree = "<group>";
 		};
 		EAD9AAEE2D52E8A300CECD26 /* Frameworks */ = {
@@ -629,6 +714,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA6BCBB02E0764DD00A97E4C /* fpconv.c in Sources */,
+				EA6BCBB12E0764DD00A97E4C /* fpconv.h in Sources */,
+				EA6BCBB42E0764DD00A97E4C /* g_fmt.c in Sources */,
+				EA6BCBA92E0764D200A97E4C /* strbuf.c in Sources */,
+				EA6BCBAA2E0764D200A97E4C /* strbuf.h in Sources */,
+				EA6BCBA62E0762A000A97E4C /* lua_cjson.c in Sources */,
+				EAD567422E027F2A00EAEA99 /* packet.c in Sources */,
+				EAD567432E027F2A00EAEA99 /* enet.h in Sources */,
+				EAD567442E027F2A00EAEA99 /* types.h in Sources */,
+				EAD567452E027F2A00EAEA99 /* host.c in Sources */,
+				EAD567462E027F2A00EAEA99 /* callbacks.h in Sources */,
+				EAD567472E027F2A00EAEA99 /* unix.h in Sources */,
+				EAD567482E027F2A00EAEA99 /* peer.c in Sources */,
+				EAD567492E027F2A00EAEA99 /* list.c in Sources */,
+				EAD5674A2E027F2A00EAEA99 /* protocol.h in Sources */,
+				EAD5674B2E027F2A00EAEA99 /* compress.c in Sources */,
+				EAD5674C2E027F2A00EAEA99 /* win32.h in Sources */,
+				EAD5674D2E027F2A00EAEA99 /* list.h in Sources */,
+				EAD5674E2E027F2A00EAEA99 /* win32.c in Sources */,
+				EAD5674F2E027F2A00EAEA99 /* time.h in Sources */,
+				EAD567502E027F2A00EAEA99 /* unix.c in Sources */,
+				EAD567512E027F2A00EAEA99 /* utility.h in Sources */,
+				EAD567522E027F2A00EAEA99 /* callbacks.c in Sources */,
+				EAD567532E027F2A00EAEA99 /* protocol.c in Sources */,
 				EA1292082D8DB0FF00244B28 /* b2_broad_phase.cpp in Sources */,
 				EA1292092D8DB0FF00244B28 /* b2_chain_shape.cpp in Sources */,
 				EA12920A2D8DB0FF00244B28 /* b2_circle_shape.cpp in Sources */,
@@ -751,6 +860,7 @@
 				EAD9AB0E2D53E69A00CECD26 /* AudioDB.cpp in Sources */,
 				EADC9F712D70BDD400DA4160 /* ComponentDB.cpp in Sources */,
 				EAD9AB082D532D0100CECD26 /* ImageDB.cpp in Sources */,
+				EA6BCB942E051CA600A97E4C /* Client.cpp in Sources */,
 				EAD9AB022D52F7AA00CECD26 /* Renderer.cpp in Sources */,
 				EABEC7742D492B5300E200C5 /* Scene.cpp in Sources */,
 				EAD9AB112D5FDAA100CECD26 /* Input.cpp in Sources */,
@@ -903,6 +1013,7 @@
 					"$(PROJECT_DIR)/LuaBridge",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/box2DSRC",
+					"$PROJECT_DIR)/enet",
 				);
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/SDL2_mixer/lib",
@@ -910,6 +1021,7 @@
 					"$(PROJECT_DIR)/SDL2/lib",
 					"$(PROJECT_DIR)/SDL2_ttf/lib",
 				);
+				OTHER_LDFLAGS = "-v";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -939,6 +1051,7 @@
 					"$(PROJECT_DIR)/LuaBridge",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/box2DSRC",
+					"$PROJECT_DIR)/enet",
 				);
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/SDL2_mixer/lib",
@@ -946,6 +1059,7 @@
 					"$(PROJECT_DIR)/SDL2/lib",
 					"$(PROJECT_DIR)/SDL2_ttf/lib",
 				);
+				OTHER_LDFLAGS = "-v";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

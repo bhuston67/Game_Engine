@@ -103,9 +103,14 @@ Scene::Scene(bool rendering, std::string& initialScene, std::vector<Actor*> & sa
                             if (type == "ParticleSystem") {
                                 createParticleSystem(member.value,key,newActor);
                             }
-                            else {
-                                ComponentDB::addComponentToActor(newActor, key, type);
-                            }
+//                            else {
+//                                if (type == "Client") {
+//                                    createClient(member.value, key, newActor);
+//                                }
+                                else {
+                                    ComponentDB::addComponentToActor(newActor, key, type);
+                                }
+                            //}
                         }
                         auto pos = std::lower_bound(newActor->types[type].begin(), newActor->types[type].end(), key);
                         newActor->types[type].insert(pos, key);
@@ -116,7 +121,7 @@ Scene::Scene(bool rendering, std::string& initialScene, std::vector<Actor*> & sa
                         else {
                             ComponentDB::templateCount[type]++;
                         }
-                        if (type == "Rigidbody" || type == "ParticleSystem") {
+                        if (type == "Rigidbody" || type == "ParticleSystem" || type == "Client") {
                             break;
                         }
                     }
@@ -261,9 +266,14 @@ void Scene::makeTemplate(std::string name) {
                         if (type == "ParticleSystem") {
                             createParticleSystem(member.value,key,newActor);
                         }
-                        else {
-                            ComponentDB::addComponentToActor(newActor, key, type);
-                        }
+//                        else {
+//                            if (type == "Client") {
+//                                createClient(member.value, key, newActor);
+//                            }
+                            else {
+                                ComponentDB::addComponentToActor(newActor, key, type);
+                            }
+                        //}
                     }
                     auto pos = std::lower_bound(newActor->types[type].begin(), newActor->types[type].end(), key);
                     newActor->types[type].insert(pos, key);
@@ -275,7 +285,7 @@ void Scene::makeTemplate(std::string name) {
                         newActor->templateCount[type]++;
                     }
 
-                    if (type == "Rigidbody" || type == "ParticleSystem") {
+                    if (type == "Rigidbody" || type == "ParticleSystem" || type == "Client") {
                         break;
                     }
                 }
@@ -896,3 +906,25 @@ void Scene::createParticleSystem(const rapidjson::Value& doc, std::string key, A
     luabridge::LuaRef ref(ComponentDB::luaState, ps);
     actor->components[key] = std::make_shared<luabridge::LuaRef>(ref);
 }
+
+
+//void Scene::createClient(const rapidjson::Value& doc, std::string key, Actor* actor) {
+//    Client* client = new Client();
+//    
+//    auto it = doc.FindMember("host");
+//    std::string host;
+//    if (it != doc.MemberEnd()) {
+//        host = it->value.GetString();
+//    }
+//    it = doc.FindMember("port");
+//    int port = -1;
+//    if (it != doc.MemberEnd()) {
+//        port = it->value.GetInt();
+//    }
+//    client->setAddress(host, port);
+//    
+//    
+//    luabridge::LuaRef ref(ComponentDB::luaState, client);
+//    actor->components[key] = std::make_shared<luabridge::LuaRef>(ref);
+//}
+
